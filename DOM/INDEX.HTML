@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body style="background-color: azure;">
+    <h2>Languages List</h2>
+
+    <ul id="list">
+        <li>javascript</li>
+    </ul>
+
+    <script>
+        function addLang(languageName){
+            const li = document.createElement('li');
+            li.innerText = languageName;
+
+            const ul = document.querySelector('#list');
+            ul.appendChild(li);
+        }
+
+        // Add items
+        addLang('python');
+        addLang('java');
+        addLang('c++');
+
+        // ✅ Update (replace 2nd item)
+        const lan2 = document.querySelector('li:nth-child(2)');
+        const newli = document.createElement('li');
+        newli.textContent = "C";
+        lan2.replaceWith(newli);
+    </script>
+</body>
+</html>

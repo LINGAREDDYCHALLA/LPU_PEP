@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Weekly Time Table</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#1c1c1c;
+    color:white;
+    text-align:center;
+}
+
+h1{
+    margin-top:50px;
+    color:orange;
+    text-shadow:2px 2px 5px black;
+}
+
+.days{
+    margin:60px auto;
+    padding:25px;
+    width:40%;
+    background:#2a2a2a;
+    border-radius:20px;
+    display:flex;
+    justify-content:space-around;
+}
+
+.day{
+    padding:30px 30px;
+    background:#3a3a3a;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:bold;
+}
+
+.day:hover{
+    background:#555;
+    transform:scale(1.1);
+}
+
+#display{
+    width:80%;
+    margin:20px auto;
+    padding:30px;
+    background:#2a2a2a;
+    border-radius:15px;
+    min-height:80px;
+    font-size:18px;
+    text-align:left;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Weekly Time Table</h1>
+
+<div class="days">
+    <div class="day" onmouseover="show('mon')">Monday</div>
+    <div class="day" onmouseover="show('tue')">Tuesday</div>
+    <div class="day" onmouseover="show('wed')">Wednesday</div>
+    <div class="day" onmouseover="show('thu')">Thursday</div>
+    <div class="day" onmouseover="show('fri')">Friday</div>
+</div>
+
+<div id="display">Hover on a day to see timetable!</div>
+
+<script>
+const data = {
+  mon: `
+    <b>Monday</b><br>
+    9-10 : Maths<br>
+    10-11 : Physics<br>
+    11-12 : Chemistry<br>
+    2-3 : English
+  `,
+  tue: `
+    <b>Tuesday</b><br>
+    9-10 : Biology<br>
+    10-11 : Maths<br>
+    11-12 : Lab<br>
+    2-3 : Sports
+  `,
+  wed: `
+    <b>Wednesday</b><br>
+    9-10 : Physics<br>
+    10-11 : English<br>
+    11-12 : Maths<br>
+    2-3 : Library
+  `,
+  thu: `
+    <b>Thursday</b><br>
+    9-10 : Chemistry<br>
+    10-11 : Biology<br>
+    11-12 : English<br>
+    2-3 : Lab
+  `,
+  fri: `
+    <b>Friday</b><br>
+    9-10 : Maths<br>
+    10-11 : Physics<br>
+    11-12 : Sports<br>
+    2-3 : Seminar
+  `
+};
+
+function show(day){
+    document.getElementById("display").innerHTML = data[day];
+}
+</script>
+
+</body>
+</html>

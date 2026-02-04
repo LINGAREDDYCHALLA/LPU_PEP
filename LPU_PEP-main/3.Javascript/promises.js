@@ -1,0 +1,2 @@
+//promises: it represent funtur event Techically it is  aobject >when we creat a promise object we are not sureweather  this promise will be fullfilled or not
+//promise has 3 states(pendig ,fullfilled ,reject)

@@ -1,0 +1,7 @@
+//selectors :they are used to feach ,html elements so that 
+
+document.getElemetById:
+documents.getElementByClass:
+document.getElementByTagName:
+documents.getElementBySelector:
+documents,getElementBySelectorAall:
