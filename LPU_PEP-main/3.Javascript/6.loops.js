@@ -17,7 +17,6 @@ console.log("Attempts failed please check the details");
 //   console.log("Countdown remians: " + i);
 //   i--;
 // }
-
 // // 2. Nested for loop:
 // // where we are creating multiple table grid:
 // // outer loop run for 3 times, inner loop should run 3 times for each iteration

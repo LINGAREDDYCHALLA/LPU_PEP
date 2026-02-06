@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Basic</title>
+    <title>List Click</title>
 </head>
-
 <body>
-    <h1>Learning About Javascript</h1>
 
-    <!-- 2nd way to include js in html -->
-    <script src="./13.type_conversion.js"></script>
+    <p>Click a hero name</p>
 
+    <ul id="list">
+        <li>Spider-Man</li>
+        <li>Superman</li>
+        <li>Iron Man</li>
+    </ul>
 
+    <button id="btn">Click Me</button>
 
-    <!-- 1st way to include js in html
-        <script>
-            let age = prompt("Enter your age");
-            if(age >= 18){
-                console.log("Can vote");
-            }else{
-                console.log("Cant vote")
+    <script>
+        const text = document.getElementById("list");
+
+        text.addEventListener("click", (e) => {
+            if (e.target.tagName === "LI") {
+                alert("You clicked: " + e.target.textContent);
             }
-        </script> -->
-</body>
+        });
+    </script>
 
+</body>
 </html>
