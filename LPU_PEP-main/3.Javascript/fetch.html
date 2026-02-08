@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Image Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        img {
+            margin-top: 20px;
+            width: 250px;
+            border-radius: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Fetch Cat Image</h1>
+
+    <button id="click">Click to Load Image</button>
+
+    <div id="output"></div>
+
+    <script>
+    
+
+        document.getElementById("click").addEventListener("click", () => {
+
+            console.log("Button clicked!");
+
+            fetch("https://api.thecatapi.com/v1/images/search")
+              .then(response => response.json())
+              .then(data => {
+
+                  
+                  let output = document.getElementById("output");
+
+                 
+                  let img = document.createElement("img");
+                  img.src = data[0].url;
+
+                 
+                  output.innerHTML = "";
+                  output.appendChild(img);
+              })
+              .catch(error => {
+                  console.log("Error:", error);
+              });
+        });
+    </script>
+
+</body>
+</html>
